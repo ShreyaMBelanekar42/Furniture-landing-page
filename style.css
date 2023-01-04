@@ -141,6 +141,53 @@ ul {
   font-size: 1.2rem;
 }
 
+footer{
+  background-color: #000;
+  color: #fff;
+  margin-top: 2rem;
+  padding: 3rem;
+  align-items: center;
+}
+
+.footer-container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.footer-links{
+  color: #fff;
+}
+
+footer #footer-links-container{
+  display: grid;
+  gap: 1rem;
+}
+
+.footer-social-links{
+  width: 30px;
+  height: 30px;
+}
+
+button{
+  background: none;
+  cursor: pointer;
+}
+
+.footer-item4, .footer-item5{
+  text-align: center;
+  padding: 1rem 0 0 0;
+}
+
+input{
+  border: none;
+  border-bottom: .5px solid #a9a9a9;
+  padding: .5rem;
+  margin: 1rem 0 0 0; 
+  background: none;
+  width: 80%;
+}
+
+
 /* 
 font-family: 'Julius Sans One', sans-serif; --heading
 font-family: 'Rubik Mono One', sans-serif; --title
