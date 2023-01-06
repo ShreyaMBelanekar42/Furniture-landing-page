@@ -9,8 +9,8 @@ fetch("featuredList.json")
         output += `
             <div class="grid-item">
                 <img src='${item.url}' />
-                <h3>${item.title}</h3>
-                <p>${item.price}</p>
+                <h3 class="product-title">${item.title}</h3>
+                <p class="product-price">${item.price}</p>
             </div>
         `;
     }
