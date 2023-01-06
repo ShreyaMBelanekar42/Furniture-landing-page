@@ -3,7 +3,7 @@ fetch("featuredList.json")
     return response.json();
 })
 .then(function (items) {
-    let placeholder = document.querySelector(".grid-container");
+    let featuredcontent = document.querySelector(".grid-container");
     let output = "";
     for(let item of items){
         output += `
@@ -14,5 +14,6 @@ fetch("featuredList.json")
             </div>
         `;
     }
-    placeholder.innerHTML = output;
+    featuredcontent.innerHTML = output;
 })
+
