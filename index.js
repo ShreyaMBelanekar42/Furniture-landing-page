@@ -1,12 +1,12 @@
 fetch("featuredList.json")
-.then(function(response){
+  .then(function (response) {
     return response.json();
-})
-.then(function (items) {
+  })
+  .then(function (items) {
     let featuredcontent = document.querySelector(".grid-container");
     let output = "";
-    for(let item of items){
-        output += `
+    for (let item of items) {
+      output += `
             <div class="grid-item">
                 <img src='${item.url}' />
                 <h3 class="product-title">${item.title}</h3>
@@ -15,5 +15,28 @@ fetch("featuredList.json")
         `;
     }
     featuredcontent.innerHTML = output;
-})
+  });
 
+const slides = document.querySelectorAll(".slide");
+var counter = 0;
+//console.log(slides);
+
+slides.forEach((slide, index) => {
+  slide.style.left = `${index * 100}%`;
+});
+
+const slideImage = () => {
+  slides.forEach((slide) => {
+    slide.style.transform = `translateX(-${counter * 100})`;
+  });
+};
+
+const goPrev = () => {
+  counter--;
+  slideImage();
+};
+
+const goNext = () => {
+  counter++;
+  slideImage();
+};
