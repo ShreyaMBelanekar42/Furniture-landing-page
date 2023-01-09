@@ -216,12 +216,13 @@ p {
   font-size: 1.2rem;
 }
 
-/* main-container-item-4 */
+/* main-container-item-3 */
 
 .card {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   transition: 0.3s;
   border: 1px solid lightgrey;
+  background-color: #fff;
 }
 
 .card:hover {
@@ -239,6 +240,143 @@ p {
   object-fit: cover;
 }
 
+/* main-container-item-4 */
+
+.grid-container-item4{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.grid-item4{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#row1-col1{
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#row2-col2{
+  grid-column-start: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#row3-col3{
+  grid-column-start: 3;
+  grid-row-start: 3;
+  grid-row-end: 4; 
+}
+
+#row2-col4{
+  grid-column-start: 4;
+  grid-row-start: 2;
+  grid-row-end: 3; 
+}
+
+#row1-col5{
+  grid-column-start: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+/* main-container-item-5 */
+
+.main-container-item-5{
+  background-color: #f5d6d4;
+  margin: 2rem 0 2rem 0;
+}
+
+.slideshow-container {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+}
+
+.slide-item1 img{
+  width: 20%;
+}
+
+.slide-item2 > h3, h1{
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 100;
+}
+
+.slide-item2 > h1{
+  font-size: 2.6rem;
+}
+
+.slide-item2 > p{
+  font-size: 1rem;
+  width: 60%;
+  margin: auto;
+  font-weight: 700;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev{
+  left: 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  color: #fff;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
 /* footer */
 
 footer {
@@ -252,6 +390,7 @@ footer {
 .footer-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  text-align: left;
 }
 
 .footer-links a {
