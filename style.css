@@ -1,3 +1,10 @@
+/* 
+font-family: 'Julius Sans One', sans-serif; --heading
+font-family: 'Rubik Mono One', sans-serif; --title
+font-family: 'Space Grotesk', sans-serif;
+font-family: 'Ubuntu', sans-serif; --normal font
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Rubik+Mono+One&family=Space+Grotesk:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap");
 
 body {
@@ -12,6 +19,8 @@ body {
   margin: auto;
 }
 
+/* navbar */
+
 .title {
   font-family: "Rubik Mono One", sans-serif;
   font-size: 2rem;
@@ -21,6 +30,13 @@ body {
 a {
   text-decoration: none;
   color: #000;
+  transition: 1s;
+}
+
+ul li.nav-links:hover,
+ul li.nav-links :active {
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 li {
@@ -41,6 +57,57 @@ ul {
   height: 50%;
   align-items: center;
 }
+
+/* nav-dropdown */
+
+.dropdown-link {
+  float: left;
+  align-items: center;
+  overflow: hidden;
+}
+
+#dropdown-icon {
+  width: 10px;
+  height: 10px;
+}
+
+.dropdown-link .dropbtn {
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+/* hero section */
 
 .blue-bg {
   background-color: #cde5f4;
@@ -94,6 +161,9 @@ ul {
   border-radius: 50%;
 }
 
+/* main-container */
+/* main-container-item-1 */
+
 .main-container-item-1 {
   display: grid;
   gap: 2rem;
@@ -118,6 +188,8 @@ ul {
 .main-container-item-1 > .button {
   margin: auto;
 }
+
+/* main-container-item-2 */
 
 .product-title {
   text-align: center;
@@ -144,20 +216,30 @@ p {
   font-size: 1.2rem;
 }
 
-.item {
-  border: 1px solid lightgrey;
+/* main-container-item-4 */
+
+.card {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: 0.3s;
+  border: 1px solid lightgrey;
 }
 
-.item :hover {
+.card:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.item > img {
+.container {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card > img {
   width: 300px;
   height: 300px;
   object-fit: cover;
 }
+
+/* footer */
 
 footer {
   background-color: #090707;
@@ -172,8 +254,14 @@ footer {
   grid-template-columns: repeat(5, 1fr);
 }
 
-.footer-links {
+.footer-links a {
   color: #fff;
+}
+
+ul li.footer-links :hover,
+ul li.footer-links :active {
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 footer #footer-links-container {
@@ -205,76 +293,3 @@ input {
   background: none;
   width: 80%;
 }
-
-.main-container-item-4 {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  margin: 2rem;
-}
-
-.main-item-4-content-1 {
-  margin: auto;
-}
-
-.main-item-4-content-1 > img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-}
-
-#heading {
-  font-family: "Julius Sans One", sans-serif;
-}
-
-.main-item-4-content-2 > h3 {
-  font-size: 2rem;
-  font-weight: 100;
-}
-
-.main-item-4-content-2 > p {
-  font-weight: 700;
-  text-align: left;
-}
-
-#flexbox {
-  display: flex;
-  align-items: center;
-  gap: 1.8rem;
-}
-
-#flexbox > p {
-  font-size: 1rem;
-  font-weight: 100;
-  color: #a9a9a9;
-}
-
-#flexbox > h1 {
-  font-size: 2.2rem;
-}
-
-.slide {
-  position: absolute;
-}
-
-.slider {
-  width: 100%;
-  height: 500px;
-  transition: 1s;
-  position: relative;
-  overflow: hidden;
-}
-
-.slider-buttons {
-  text-align: center;
-}
-
-/* 
-font-family: 'Julius Sans One', sans-serif; --heading
-font-family: 'Rubik Mono One', sans-serif; --title
-font-family: 'Space Grotesk', sans-serif;
-font-family: 'Ubuntu', sans-serif; --normal font
-*/

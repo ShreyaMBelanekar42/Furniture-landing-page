@@ -17,26 +17,16 @@ fetch("featuredList.json")
     featuredcontent.innerHTML = output;
   });
 
-const slides = document.querySelectorAll(".slide");
-var counter = 0;
-//console.log(slides);
+function dropdownFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
 
-slides.forEach((slide, index) => {
-  slide.style.left = `${index * 100}%`;
-});
-
-const slideImage = () => {
-  slides.forEach((slide) => {
-    slide.style.transform = `translateX(-${counter * 100})`;
-  });
-};
-
-const goPrev = () => {
-  counter--;
-  slideImage();
-};
-
-const goNext = () => {
-  counter++;
-  slideImage();
+// Close the dropdown if the user clicks outside of it
+window.onclick = function (e) {
+  if (!e.target.matches(".dropbtn")) {
+    var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains("show")) {
+      myDropdown.classList.remove("show");
+    }
+  }
 };
